@@ -3,6 +3,25 @@
 //Complete this algo
 const isLoop = (linkedlist) => {
 
+const refArray = []
+let bool = false
+let currNode = linkedlist.head
+
+  while(!bool){
+    if(!currNode.next){
+      break;
+    }
+    if(refArray.includes(currNode.value)){
+      bool = true
+    }
+    else{
+      refArray.push(currNode.value)
+      currNode = currNode.next
+    }
+  }
+
+return bool
+
 };
 
 
